@@ -4,11 +4,11 @@ import Repos from '../repos/Repos'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const User = (user, getUser, getUserRepos, match, loading, repos) => {
+const User = ({user, getUser, getUserRepos, match, loading, repos}) => {
     useEffect(() => {
         getUser(match.params.login)
         getUserRepos(match.params.login)
-
+ 
         //eslint-disable-next-line
     }, [])
 
